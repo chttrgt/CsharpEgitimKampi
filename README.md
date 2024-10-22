@@ -191,8 +191,6 @@ Bu bölümde metod oluşturmayı ve metodların türlerini gördük.
 ## 📜 09_Database (Veritabanı)
 Bu bölümde MSSQL Server Management Studio ile veritabanı oluşturmayı ve tablolar eklemeyi öğrendik.\
 C# tarafında ise oluşturmuş olduğumuz veritabanından `ADO.NET` teknolojisi ile verilerimizi çekip ekrana yazdırdık. 
-
-[MSSQL Server - 2022 Kurulumu:](https://www.youtube.com/watch?v=UhhYMLVd4MA) 
         
   ```csharp
       SqlConnection con = new SqlConnection("data source=CIHATTURGUT\\SQLCHTTRGT; initial catalog=EgitimKampiDb; integrated security=true");
@@ -216,6 +214,11 @@ C# tarafında ise oluşturmuş olduğumuz veritabanından `ADO.NET` teknolojisi 
       con.Close();
  
   ```
+
+
+[MSSQL Server - 2022 Kurulumu'na buradan ulaşabilirsiniz!](https://www.youtube.com/watch?v=UhhYMLVd4MA) 
+###### Not: `MSSQL Server` kurulumundan sonra `MSSQL Server Management Studio`'yu da kurmanız gerek. Onu da [buradan](https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16) indirebilirsiniz.
+
 ---
 
 ### SONUÇ: Bu kamp'ın en güzel yanı öğrendiklerinizi hemen örneklerle uygulayıp pekiştirmeniz. Ve ayrıca Murat hocamızın bildiklerini aktarım becerisi. Bunun için hocamıza teşekkür ederim.💖
