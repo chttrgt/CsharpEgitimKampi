@@ -215,6 +215,31 @@ C# tarafında ise oluşturmuş olduğumuz veritabanından `ADO.NET` teknolojisi 
  
   ```
 
+---
+
+## 📜 10_Database CRUD Operations (Veritabanı CRUD işlemleri)
+
+`CRUD --> Create --> Read --> Update --> Delete` bu öğrendiğimiz işlemler ile veritabanındaki verileri manipüle edebiliyoruz.\
+Aşağıdaki örnekte Kategori tablosuna kullanıcıdan aldığımız yeni bir kategoriyi eklemiş olduk.
+
+  ```csharp
+   Console.WriteLine("***** Menü Sipariş İşlem Paneli *****");
+   Console.WriteLine();
+   
+   Console.WriteLine("-------------------------------------");
+   Console.Write("Eklemek istediğiniz Kategori Adı: ");
+   string categoryName = Console.ReadLine();
+   
+   SqlConnection conn = new SqlConnection("data source=CIHATTURGUT\\SQLCHTTRGT; initial catalog=EgitimKampiDb; integrated security=true");
+   conn.Open();
+   SqlCommand cmd = new SqlCommand("Insert into tblCategory (CategoryName) values(@p1) ", conn);
+   cmd.Parameters.AddWithValue("@p1", categoryName);
+   cmd.ExecuteNonQuery();
+   conn.Close();
+   
+   Console.WriteLine("Kategori başarılı bir şekilde eklendi!");
+  
+  ```
 
 [MSSQL Server - 2022 Kurulumu'na buradan ulaşabilirsiniz!](https://www.youtube.com/watch?v=UhhYMLVd4MA) 
 ###### Not: `MSSQL Server` kurulumundan sonra `MSSQL Server Management Studio`'yu da kurmanız gerek. Onu da [buradan](https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16) indirebilirsiniz.
